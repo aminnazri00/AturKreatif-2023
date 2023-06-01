@@ -1,0 +1,40 @@
+version: "3"
+
+
+services:
+  
+  lfi:
+    container_name: lfi_c
+    image: lfi_i
+    build: .
+    ports:
+      - 8001:80
+    restart: always
+
+    volumes:
+      - ./src:/var/www/html
+    environment:
+      - MYSQL_DATABASE=nothing_db
+      - MYSQL_USER=nothing
+      - MYSQL_PASSWORD=toor123!
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1
+
+  db:
+    image: mysql
+    hostname: sqldb
+    environment:
+      - MYSQL_DATABASE=nothing_db
+      - MYSQL_USER=nothing
+      - MYSQL_PASSWORD=toor123!
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1
+    volumes:
+      - "./db:/docker-entrypoint-initdb.d" # sync persistent sql files with container
+
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 6222:80
+    environment:
+      - PMA_HOST=db
+      - PMA_PORT=3306
