@@ -1,0 +1,16 @@
+version: "3"
+
+
+services:
+  
+  nothing:
+    container_name: os_c
+    image: os_i
+    build: .
+    ports:
+      - 8003:80
+    restart: always
+
+    volumes:
+      - ./src:/var/www/html
+

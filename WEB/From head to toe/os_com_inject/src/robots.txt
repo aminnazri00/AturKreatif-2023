@@ -1,0 +1,3 @@
+Welcome to page two of Sanity Check in space, here's some robots.txt stuff.
+User-agent: S3cr3tAg3nt
+Disallow: humans.txt/
