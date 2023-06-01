@@ -1,8 +1,8 @@
-#Cube Challenge Write up
+# Cube Challenge Write up
 The challenge description stated **The flag is the outermost of the image.** and when we download the image provided **4D.jpg** there is a **Dimension** keyword.
 Image's dimensions consists of its **width and height** which could be change by alter its hex value.
 
-##Steps
+## Steps
 We need to determine where the height is marked in the JPG image based on typical JPEG markers. The table below shows the baseline Start of Frame (SOF0) starts at **0xFF 0xC0.**
 ![Common JPEG markers](https://github.com/aminnazri00/AturKreatif-2023/assets/58243519/12d84d7f-c611-43a1-86f5-52df12841f3c)
 
