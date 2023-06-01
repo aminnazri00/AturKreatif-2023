@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  aturkreatif_yaml2json:
+    container_name: aturkreatif_yaml2json
+    image: yaml2json
+    build: .
+    ports:
+      - 8006:8000
+    environment:
+      - FLAG=47urkr347if{85fd4d1884d178f12430e59ae259b55b2e97f47b7a60ac996030215573ee2aa35ad63d47ebe321c9da718011bd23e519dceaa8ee518819e3b7c173f25463d31e}
+    restart: always
