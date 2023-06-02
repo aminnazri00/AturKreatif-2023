@@ -1,6 +1,6 @@
 1. Insert the secret.wav file in the spectogram analyzer online tool or link below:
-  
-  https://www.dcode.fr/spectral-analysis
+
+https://www.dcode.fr/spectral-analysis
   
 2. Please make sure Logarithmic scale has been tick to ensure clearer flag.
   
