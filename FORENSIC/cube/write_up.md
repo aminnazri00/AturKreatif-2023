@@ -30,10 +30,11 @@ Hit  `ctrl + f` on the input panel and search for `FF C0`, the current height an
 
 
 4. Change the height and width byte to any bigger value such as `06` to `09` and check the image on the output panel. 
+**:ghost: THATS IT WE FOUND THE FLAG! :ghost:**
 
 ![image](https://github.com/aminnazri00/AturKreatif-2023/assets/58243519/1f4004c9-9074-42a6-9433-4bcf4ffe71a0)
 
-THATS IT WE FOUND THE FLAG! :ghost:
+
 
 
 
