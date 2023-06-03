@@ -1,6 +1,4 @@
 # PYTHON DESERILAZATION
-Certainly! Serialization is the process of converting a Python object into a format that can be stored or transmitted. Deserialization is the reverse process of converting the serialized data back into a Python object.
-
 Serialization in Python refers to the process of converting a Python object into a format that can be easily stored or transmitted. This format is typically a string or a byte stream. Deserialization, on the other hand, is the process of converting the serialized data back into a Python object.
 
 Serialization allows you to save the state of an object and recreate it later or send it over a network. It is useful for tasks like saving data to a file, transferring data between different systems, or storing data in a database.
