@@ -1,5 +1,8 @@
 #Some_Weird_Header
 
+show file type
+execute
+
 We can't just run the file. If you see the PE file header, it's different with babyrev_2.0
 Look at the 'Type' attribute
 
