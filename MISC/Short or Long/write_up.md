@@ -15,25 +15,7 @@ There is two method that can be used for this qeustion which is by creating the 
 The first method is to create a script in which can looked like this
 
 ...
-import socket
-IP_ADDR = "146.190.82.37"
-PORT_NUM = 63424
-socket =  socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-while True:
-    a = "47urkr347if{i_want_to_find_the_real_you}"
-    message = a
-    print('Message being send to server: ' + message + "\n")
-    #send input to the server
-    socket.sendto(message.encode('utf-8'), (IP_ADDR, PORT_NUM))
-    if a == 'X' or a == 'x':
-        break
-    #receive result/output from the server
-    data, address = socket.recvfrom(2048)
-    text = data.decode('utf-8')
-    print('Result received from server %s : %s ' % (address, text) + "\n")
-    break
-print('Connection Closed')
-socket.close()
+![image](https://github.com/aminnazri00/AturKreatif-2023/assets/93955436/af806b51-57aa-4c14-85d6-b105307f4203)
 ...
 
 The second method is bby sending an echo of the flag to the server which will look like this
