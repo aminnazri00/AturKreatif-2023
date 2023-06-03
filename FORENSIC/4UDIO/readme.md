@@ -1,4 +1,4 @@
-1. Insert the secret.wav file in the spectogram analyzer online tool or link below:
+1. Insert the secret.wav file in the spectral analyzer online tool or link below:
 
 https://www.dcode.fr/spectral-analysis
   
