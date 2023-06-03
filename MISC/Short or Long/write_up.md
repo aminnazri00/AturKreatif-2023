@@ -15,7 +15,7 @@ There is two method that can be used for this qeustion which is by creating the 
 The first method is to create a script in which can looked like this
 
 ...
-**import socket
+import socket
 IP_ADDR = "146.190.82.37"
 PORT_NUM = 63424
 socket =  socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -33,7 +33,7 @@ while True:
     print('Result received from server %s : %s ' % (address, text) + "\n")
     break
 print('Connection Closed')
-socket.close()**
+socket.close()
 ...
 
 The second method is bby sending an echo of the flag to the server which will look like this
