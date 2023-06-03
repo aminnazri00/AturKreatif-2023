@@ -19,3 +19,14 @@ We need to determine where the height is marked in the JPG image based on typica
 
 ![Image width and height](https://github.com/aminnazri00/AturKreatif-2023/assets/58243519/e27a5171-9b9c-445d-95e8-b9cf61fcc48e)
 
+
+4. We know the marker starts on **0xFF 0xC0**, however where is the width and height bytes for us to edit? This is what we found after googling [JPEG File Format](https://tacodewolff.nl/posts/20120220-jpeg-file-format/). The position is after the precision of 8 bits **08**, which in this case is `06 E3 06 33`.
+
+![Screenshot 2023-06-03 211500](https://github.com/aminnazri00/AturKreatif-2023/assets/58243519/80486dcb-ed1f-4e61-8b62-18225481542a)
+
+
+
+
+
+
+
