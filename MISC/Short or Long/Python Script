@@ -1,0 +1,20 @@
+
+import socket
+IP_ADDR = "146.190.82.37"
+PORT_NUM = 63424
+socket =  socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+while True:
+    a = "47urkr347if{i_want_to_find_the_real_you}"
+    message = a
+    print('Message being send to server: ' + message + "\n")
+    #send input to the server
+    socket.sendto(message.encode('utf-8'), (IP_ADDR, PORT_NUM))
+    if a == 'X' or a == 'x':
+        break
+    #receive result/output from the server
+    data, address = socket.recvfrom(2048)
+    text = data.decode('utf-8')
+    print('Result received from server %s : %s ' % (address, text) + "\n")
+    break
+print('Connection Closed')
+socket.close()
