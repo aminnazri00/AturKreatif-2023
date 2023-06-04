@@ -4,14 +4,19 @@ The challenge provide us with usb1.pcapng which is a packet capture file that ca
 ## Steps
 1. Open the pcap file with wireshark and start analyze the log. Reading about USB reveals that there are four basic modes of transfer for USB: The ‘transfer_type’ specifies if this transfer is isochronous (0), interrupt (1), control (2) or bulk (3) [USB Wireshark](https://gitlab.com/wireshark/wireshark/-/wikis/USB).
 2. The file is pretty small and most of it are the URB_INTERRUPT events that encode key presses labelled as HID Data. The suspicion is that the flag is encoded in them. 
+
+![image](https://github.com/aminnazri00/AturKreatif-2023/assets/58243519/fa1ee578-640d-467d-8822-bc5e1216269b)
+
+
 3. To filter out only the packet we want, we can filter them by `usb.src == 1.9.1 && !usbhid.data == 00:00:00:00:00:00:00:00` to get data from the key pressed.
 
 ![image](https://github.com/aminnazri00/AturKreatif-2023/assets/58243519/c0335f03-1a8a-4c97-ae26-d5e31ac88fa2)
 
 
-4. Now we can refer to [HID Usage Tables](https://usb.org/sites/default/files/hut1_4.pdf) on page **19** to decode the HID Data to keyboard key.
+4. Now we can refer to [HID Usage Tables](https://usb.org/sites/default/files/hut1_4.pdf) on page **90** to decode the HID Data to keyboard key.
 
-![image](https://github.com/aminnazri00/AturKreatif-2023/assets/58243519/fa1ee578-640d-467d-8822-bc5e1216269b)
+![image](https://github.com/aminnazri00/AturKreatif-2023/assets/58243519/357c9b5c-8676-48ba-9849-330bc8f74242)
+
 
 
 5. We can decode it manually one by one which will take a lot of time, or we could make a python script to decode it.
@@ -29,7 +34,7 @@ if len(sys.argv) != 2:
     print("[!] USAGE: ./decode.py <file.pcap>")
     exit()
 
-usb_codes_printable = { #https://www.usb.org/sites/default/files/documents/hut1_12v2.pdf
+usb_codes_printable = { #refer to https://usb.org/sites/default/files/hut1_4.pdf
     0x04:"aA",      0x05:"bB",      0x06:"cC",      0x07:"dD",      0x08:"eE",      0x09:"fF",
     0x0A:"gG",      0x0B:"hH",      0x0C:"iI",      0x0D:"jJ",      0x0E:"kK",      0x0F:"lL",
     0x10:"mM",      0x11:"nN",      0x12:"oO",      0x13:"pP",      0x14:"qQ",      0x15:"rR",
@@ -43,15 +48,14 @@ usb_codes_printable = { #https://www.usb.org/sites/default/files/documents/hut1_
     0x60:"99",      0x61:"00"
     }
 
-file_path = sys.argv[1]
-
 def read_file_lines(file):
     lines = []
     with open(file, 'r') as text:
         for line in text:
             lines.append(line.strip())
     return lines
-
+    
+file_path = sys.argv[1]
 lines_array = read_file_lines(file_path)
 output =""
 
@@ -71,5 +75,6 @@ for line in lines_array:
 print(output)
 ```
 8. Lastly we can run the script just like this `python3 decode.py out.txt`.
+
 **:ghost: THATS IT WE GET THE FLAG :ghost:**
 
