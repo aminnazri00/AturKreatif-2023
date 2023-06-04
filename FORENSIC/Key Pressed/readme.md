@@ -76,5 +76,5 @@ print(output)
 ```
 8. Lastly we can run the script just like this `python3 decode.py out.txt`.
 
-**:ghost: THATS IT WE GET THE FLAG :ghost:**
+**:ghost: THATS IT WE FOUND THE FLAG! :ghost:**
 
