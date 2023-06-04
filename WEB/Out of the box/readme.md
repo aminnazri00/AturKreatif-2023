@@ -10,6 +10,7 @@ The system displayed the tracking website that has the illegal package's trackin
 
 ![image](https://github.com/aminnazri00/AturKreatif-2023/assets/86725014/d9441653-048b-4543-a6c3-4f1a813dae6a)
 
+4. Send the request to repeater
 5. Enter the id with SQL syntax below
 
 (Note: For the first time only insert one null because want to try and error till get 6 columns that needed)
